@@ -53,9 +53,9 @@ def top(input_list):
     ['Jan', 'Feb']
 
     """
-    get_top = input_list.pop()
+    get_top = input_list[:-1]
 
-    return input_list
+    return get_top
 
 
 def first_three(input_list):
@@ -148,7 +148,6 @@ def replace_head(input_list):
     """
 
     input_list[0] = 42
-    
 
 
 def replace_third_and_last(input_list):
@@ -188,8 +187,6 @@ def replace_middle(input_list):
 
     input_list[2:-2] = [42, 37]
 
-    pass
-
 
 def delete_third_and_seventh(input_list):
     """Remove third and seventh elements of input_list and return nothing.
@@ -205,8 +202,8 @@ def delete_third_and_seventh(input_list):
 
     """
 
-    del input_list[2]
-    del input_list[5]
+    input_list[2:3] = []
+    input_list[5:6] = []
 
 
 def delete_middle(input_list):
@@ -225,6 +222,4 @@ def delete_middle(input_list):
 
     """
 
-    del input_list[2:-2]
-
-    pass
+    input_list[2:-2] = []
